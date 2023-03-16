@@ -21,7 +21,7 @@ class RemoteConfigUtility {
     
     public static var sharedInstance = RemoteConfigUtility()
     var remoteConfig: RemoteConfig?
-
+    
     private  init() {
         //private init for singleton class object
     }
@@ -47,7 +47,7 @@ class RemoteConfigUtility {
         }
         return (remoteConfig?.configValue(forKey: key)) ?? RemoteConfigValue.init()
     }
-
+    
     func postRemoteConfigCompletionNotification(){
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: RemoteConfigNotificationFetchCompleted, object: nil)
@@ -55,7 +55,7 @@ class RemoteConfigUtility {
     }
     
     //Check if app update is needed or not
-    func appUpdateNeeded() -> Bool {
+    func isAppUpdateNeeded() -> Bool {
         var appUpdateNeeded = false
         let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         let remoteAppVersion = (RemoteConfigUtility.sharedInstance.getRemoteConfigValueForKey(key: RemoteConfigKey.versionCode).stringValue)!
@@ -87,7 +87,7 @@ class RemoteConfigUtility {
             }
         }
     }
-
-
+    
+    
 }
 

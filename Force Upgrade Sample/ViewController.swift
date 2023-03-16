@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         
         
-        if RemoteConfigUtility.sharedInstance.appUpdateNeeded() {
+        if RemoteConfigUtility.sharedInstance.isAppUpdateNeeded() {
             
             let alertController = UIAlertController.init(title: "We just got better!", message:"The new version of the app is here. It's time for you to update so you can enjoy the latest fixes, features and fun", preferredStyle: UIAlertController.Style.alert)
             let updateAction = UIAlertAction.init(title: "GET THE UPDATE", style: .default){ (action) -> Void in
