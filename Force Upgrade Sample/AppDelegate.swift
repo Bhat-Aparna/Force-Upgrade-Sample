@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseMessaging
+
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        RemoteConfigUtility.sharedInstance.setup()
+        
+        //Register app for push notifications
+        UIApplication.shared.registerForRemoteNotifications()
+
+        //Subscribe for push notification
+        subscribeForPushNotification()
+        
         return true
     }
 
@@ -31,6 +42,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func subscribeForPushNotification(){
+        Messaging.messaging().subscribe(toTopic: "PUSH_RC") { error in
+          print("Subscribed to push RC topic")
+            print("Error \(error?.localizedDescription ?? "NA")")
+        }
+
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if userInfo["CONFIG_STATE"] != nil {
+            UserDefaults.standard.set(true, forKey: "CONFIG_STATE")
+            UserDefaults.standard.synchronize()
+            if application.applicationState != .background{
+                forceUpdateRemoteConfigIfNeeded()
+            }
+        }
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
+    
+    func forceUpdateRemoteConfigIfNeeded(){
+        if UserDefaults.standard.bool(forKey: "CONFIG_STATE") {
+            UserDefaults.standard.set(false, forKey: "CONFIG_STATE")
+            UserDefaults.standard.synchronize()
+            RemoteConfigUtility.sharedInstance.fetchRemoteConfig(isForceFetch: true)
+        }
+    }
 
 }
+
 

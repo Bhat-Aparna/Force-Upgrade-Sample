@@ -16,6 +16,10 @@
 		0D41FAA929750CAD00DE23B2 /* Force_Upgrade_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D41FAA829750CAD00DE23B2 /* Force_Upgrade_SampleTests.swift */; };
 		0D41FAB329750CAD00DE23B2 /* Force_Upgrade_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D41FAB229750CAD00DE23B2 /* Force_Upgrade_SampleUITests.swift */; };
 		0D41FAB529750CAD00DE23B2 /* Force_Upgrade_SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D41FAB429750CAD00DE23B2 /* Force_Upgrade_SampleUITestsLaunchTests.swift */; };
+		0D41FAC229750E4F00DE23B2 /* RemoteConfigUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D41FAC129750E4F00DE23B2 /* RemoteConfigUtility.swift */; };
+		0D41FAC629750EC500DE23B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D41FAC429750EC500DE23B2 /* GoogleService-Info.plist */; };
+		0D41FAC729750EC500DE23B2 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D41FAC529750EC500DE23B2 /* RemoteConfigDefaults.plist */; };
+		429C76A83818F4A2165E66D0 /* Pods_Force_Upgrade_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7249633AD01185420B2A24 /* Pods_Force_Upgrade_Sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,13 @@
 		0D41FAAE29750CAD00DE23B2 /* Force Upgrade SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Force Upgrade SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D41FAB229750CAD00DE23B2 /* Force_Upgrade_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Force_Upgrade_SampleUITests.swift; sourceTree = "<group>"; };
 		0D41FAB429750CAD00DE23B2 /* Force_Upgrade_SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Force_Upgrade_SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D41FAC129750E4F00DE23B2 /* RemoteConfigUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfigUtility.swift; sourceTree = "<group>"; };
+		0D41FAC429750EC500DE23B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0D41FAC529750EC500DE23B2 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		0D6B77EC299B939300BB7B7B /* Force Upgrade Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Force Upgrade Sample.entitlements"; sourceTree = "<group>"; };
+		545790A9A8F8200BB6F364C4 /* Pods-Force Upgrade Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Force Upgrade Sample.release.xcconfig"; path = "Target Support Files/Pods-Force Upgrade Sample/Pods-Force Upgrade Sample.release.xcconfig"; sourceTree = "<group>"; };
+		695A5E70A7924F47E45EC2F0 /* Pods-Force Upgrade Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Force Upgrade Sample.debug.xcconfig"; path = "Target Support Files/Pods-Force Upgrade Sample/Pods-Force Upgrade Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		DC7249633AD01185420B2A24 /* Pods_Force_Upgrade_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Force_Upgrade_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429C76A83818F4A2165E66D0 /* Pods_Force_Upgrade_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,8 @@
 				0D41FAA729750CAD00DE23B2 /* Force Upgrade SampleTests */,
 				0D41FAB129750CAD00DE23B2 /* Force Upgrade SampleUITests */,
 				0D41FA8F29750CAA00DE23B2 /* Products */,
+				9D5F197C85C7952EB31FF1D7 /* Pods */,
+				4762A063C13642BC9B67E74E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +113,16 @@
 		0D41FA9029750CAA00DE23B2 /* Force Upgrade Sample */ = {
 			isa = PBXGroup;
 			children = (
+				0D6B77EC299B939300BB7B7B /* Force Upgrade Sample.entitlements */,
 				0D41FA9129750CAA00DE23B2 /* AppDelegate.swift */,
+				0D41FAC129750E4F00DE23B2 /* RemoteConfigUtility.swift */,
 				0D41FA9329750CAA00DE23B2 /* SceneDelegate.swift */,
 				0D41FA9529750CAA00DE23B2 /* ViewController.swift */,
 				0D41FA9729750CAA00DE23B2 /* Main.storyboard */,
 				0D41FA9A29750CAD00DE23B2 /* Assets.xcassets */,
 				0D41FA9C29750CAD00DE23B2 /* LaunchScreen.storyboard */,
 				0D41FA9F29750CAD00DE23B2 /* Info.plist */,
+				0D41FAC329750EC500DE23B2 /* Resources */,
 			);
 			path = "Force Upgrade Sample";
 			sourceTree = "<group>";
@@ -127,6 +144,32 @@
 			path = "Force Upgrade SampleUITests";
 			sourceTree = "<group>";
 		};
+		0D41FAC329750EC500DE23B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D41FAC429750EC500DE23B2 /* GoogleService-Info.plist */,
+				0D41FAC529750EC500DE23B2 /* RemoteConfigDefaults.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4762A063C13642BC9B67E74E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC7249633AD01185420B2A24 /* Pods_Force_Upgrade_Sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D5F197C85C7952EB31FF1D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				695A5E70A7924F47E45EC2F0 /* Pods-Force Upgrade Sample.debug.xcconfig */,
+				545790A9A8F8200BB6F364C4 /* Pods-Force Upgrade Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D41FAB829750CAD00DE23B2 /* Build configuration list for PBXNativeTarget "Force Upgrade Sample" */;
 			buildPhases = (
+				992F5D28B9A3EC644A5CA80A /* [CP] Check Pods Manifest.lock */,
 				0D41FA8A29750CAA00DE23B2 /* Sources */,
 				0D41FA8B29750CAA00DE23B2 /* Frameworks */,
 				0D41FA8C29750CAA00DE23B2 /* Resources */,
+				86D5BBFF2D3F7A5774F879D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D41FA9E29750CAD00DE23B2 /* LaunchScreen.storyboard in Resources */,
+				0D41FAC729750EC500DE23B2 /* RemoteConfigDefaults.plist in Resources */,
+				0D41FAC629750EC500DE23B2 /* GoogleService-Info.plist in Resources */,
 				0D41FA9B29750CAD00DE23B2 /* Assets.xcassets in Resources */,
 				0D41FA9929750CAA00DE23B2 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +300,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86D5BBFF2D3F7A5774F879D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Force Upgrade Sample/Pods-Force Upgrade Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Force Upgrade Sample/Pods-Force Upgrade Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Force Upgrade Sample/Pods-Force Upgrade Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		992F5D28B9A3EC644A5CA80A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Force Upgrade Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D41FA8A29750CAA00DE23B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +349,7 @@
 			files = (
 				0D41FA9629750CAA00DE23B2 /* ViewController.swift in Sources */,
 				0D41FA9229750CAA00DE23B2 /* AppDelegate.swift in Sources */,
+				0D41FAC229750E4F00DE23B2 /* RemoteConfigUtility.swift in Sources */,
 				0D41FA9429750CAA00DE23B2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,11 +522,14 @@
 		};
 		0D41FAB929750CAD00DE23B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 695A5E70A7924F47E45EC2F0 /* Pods-Force Upgrade Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Force Upgrade Sample/Force Upgrade Sample.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3QU226PP84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Force Upgrade Sample/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -449,7 +542,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.spireon.Force-Upgrade-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spireon.forceupgradesample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -459,11 +552,14 @@
 		};
 		0D41FABA29750CAD00DE23B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545790A9A8F8200BB6F364C4 /* Pods-Force Upgrade Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Force Upgrade Sample/Force Upgrade Sample.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3QU226PP84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Force Upgrade Sample/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,7 +572,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.spireon.Force-Upgrade-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spireon.forceupgradesample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

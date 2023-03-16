@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ios_version_code</key>
+	<string>1.0.0</string>
+	<key>ios_app_store_link</key>
+	<string></string>
+	<key>ios_force_upgrade</key>
+	<false/>
+	<key>ios_force_upgrade_show_continue</key>
+	<false/>
+</dict>
+</plist>
